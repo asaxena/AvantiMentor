@@ -1,0 +1,12 @@
+name = Insert view
+description = Input filter which allows to embed views.
+dependencies[] = views
+package = Views
+core = 6.x
+
+; Information added by drupal.org packaging script on 2011-02-25
+version = "6.x-2.x-dev"
+core = "6.x"
+project = "insert_view"
+datestamp = "1298619457"
+

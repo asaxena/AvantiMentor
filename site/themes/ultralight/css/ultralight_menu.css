@@ -1,0 +1,7 @@
+/**
+ * $Id: ultralight_menu.css 3 2010-08-06 17:17:56Z jackncoke $
+ */
+ul.menu {display:block; position:relative;}
+ul.menu li {float:left;}
+ul.menu li ul { display:none; width:100px; position:absolute; }
+ul.menu li ul li{width:100px;}

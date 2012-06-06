@@ -1,0 +1,108 @@
+// $Id: README 111 2010-08-25 03:01:30Z jackncoke $
+WHERE TO START
+--------------
+
+Yay! You opened the correct file first. The first thing that people notice when
+they download the Ultralight theme is that there are A LOT of files -- way more than
+other themes.
+
+Don't worry! You don't need to learn everything all at once in order to make a
+drupal theme. Ultralight will do the bits you haven't learned and patiently wait for
+you to discover the documentation and inline comments about them.
+
+
+SUGGESTED READING
+-----------------
+
+Installation
+  If you don't know how to install a Drupal theme, there is a quick primer later
+  in this document.
+
+Theme .info file
+  Your theme's .info file holds the basic information about your theme that
+  Drupal needs to know: its name, description, features, template regions, CSS
+  files, and JavaScript. Don't worry about all these lines just yet.
+
+ONLINE READING
+--------------
+Excellent documentation on Drupal theming can be found in the Theme Guide:
+  http://drupal.org/theme-guide
+
+
+INSTALLATION
+------------
+
+ 1. Download Ultralight http://themeforest.net/item/ultralight-clean-and-simple-drupal-6-theme/112375
+
+ 2. Unpack the downloaded file, take the entire ultralight folder and place it in your
+    Drupal installation under one of the following locations:
+      sites/all/themes
+        making it available to the default Drupal site and to all Drupal sites
+        in a multi-site configuration
+      sites/default/themes
+        making it available to only the default Drupal site
+      sites/example.com/themes
+        making it available to only the example.com site if there is a
+        sites/example.com/settings.php configuration file
+
+    Please note: you will need to create the "theme" folder under "sites/all/"
+    or "sites/default/".
+
+    For more information about acceptable theme installation directories, read
+    the sites/default/default.settings.php file in your Drupal installation.
+
+ 3. Log in as an administrator on your Drupal site and go to Administer > Site
+    building > Themes (admin/build/themes). You will see the ultralight. You can optionally 
+    make ultralight the default theme.
+
+MIAN SLIDESHOW
+--------------------
+/**
+* MIAN SLIDESHOW PHP CODE in BLOCK
+*/
+
+	<div class="slidecontainer">
+	<div class="slideshow">
+	<div class="items" > <!-- slide items -->
+	<?php print theme('imagecache', 'px960', 'sites/default/files/evento.png', 'Evento', 'slide item 1'); ?>
+	<!-- Drupal 6 print image api code --> <?php print theme('image','sites/default/fiels/your-slide-image.jpg'); ?>
+	<!-- or you can add just with img tag --> <img src="sites/default/fiels/your-slide-image.jpg" alt="" />
+	
+		<div class="slideinfo"> <!-- optional -->
+		<h2>Slide Title</h2><!-- optional -->
+		Slide description <!-- optional -->
+		</div>
+	</div> <!-- slide items end -->
+
+	
+</div>
+</div>
+
+	
+CLEAN LOGIN BLOCK
+------------------
+/**
+* CLEAN LOGIN BLOCK PHP CODE
+*/
+
+<?php
+  global $user;                                                                
+
+  if (!$user->uid) {
+	$login_form = get_user_login_form(); 
+	print $login_form->form_start; 
+	print $login_form->name; 
+	print $login_form->pass; 
+	print $login_form->submit; 
+	print $login_form->form_end;
+  }                                                                            
+  else {   
+    $class = 'clean-login';                                                                
+    print t('<p class="user-info">Hi !user, welcome back.</p>', array('!user' => theme('username', $user))); 
+  
+    print theme('item_list', array(
+      l(t('Account'), 'user/'.$user->uid, array('title' => t('Edit your account'))),
+      l(t('Logout'), 'logout')),NULL, 'ul', array('class' => $class)); 
+	
+  }
+?>

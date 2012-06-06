@@ -1,0 +1,8 @@
+/**
+ * $Id: comment.css 3 2010-08-06 17:17:56Z jackncoke $
+ */
+#comments { padding:10px; border:solid 2px #dadad7 ; margin-top:10px; }
+#comments .picture {float:left; padding:10px;}
+#comments .indented {margin-left:25px; padding-left:10px; border-left:solid 2px #dadad7; }
+#comments .submitted {font-size:10px; font-style:normal; font-variant:small-caps; background-image:none;}
+#comments .links{ text-align:right;}

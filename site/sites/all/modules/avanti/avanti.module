@@ -1,0 +1,80 @@
+<?php 
+
+function avanti_get_email($vid){
+	$children = taxonomy_get_tree(2,$vid);
+	$parents = taxonomy_get_parents_all($vid);
+		
+	$all = array_merge($children, $parents);
+	
+	foreach($all as $item){
+		$names[] = $item->name;
+	}
+	
+	$userNames = implode("', '",$names);
+	
+	$query = "select * from {users} u where u.name in ('".$userNames."')";
+	$result = db_query($query);
+	
+	while ($r = db_fetch_array($result)) {
+		$rows[] = $r;
+	}
+	
+	return $rows;
+}
+
+function avanti_send_mail($email, $new_node_id){
+		$message = array();
+		$message['id'] = "new_flag_created_message";
+		$message['to'] = $email;
+		$message['subject']= "New Flag Created";
+		$message['body'][] = "A new flag has been created. You can view the flag at ";
+		drupal_mail_send($message);
+}
+
+
+/**
+* Implementation of hook_nodeapi().
+*/
+function avanti_nodeapi(&$node, $op, $a3 = NULL, $a4 = NULL) {
+	if ($op == 'insert' && $node->type=='flag') {
+		watchdog('action','Inserting node '.$node->title);
+		$total = count($node->field_flag_access );
+		$emails = array();
+		for($cnt=0;$cnt<$total;++$cnt){
+				$emails  = array_merge($emails, avanti_get_email($node->field_flag_access[$cnt]['value']));
+		}
+		
+		foreach($emails as $mail){
+			$mails[] = $mail["mail"];
+		}
+		
+		$mails = array_unique($mails);
+		avanti_notify($mails, $node->nid,$node->title);
+	}	
+}
+
+function avanti_notify($accounts,$nid,$title) {
+    foreach ($accounts as $account) {
+      $params['account'] = $account;
+	  $params['nid'] = $nid;  
+	  $params['title'] = $title;
+	  
+	  
+      // example_mail() will be called based on the first drupal_mail() parameter.
+      drupal_mail('avanti', 'notice', $account, user_preferred_language($account), $params);
+    }
+  }
+
+function avanti_mail($key, &$message, $params) {
+    $message['subject'] = "FLAG: ".$params['title'];
+    $mail_body = "Hi \n\n";
+	$mail_body .= "A new flag has been created. Please visit http://avanti.gas.ind.in/?q=node/".$params['nid']." to view the flag.";
+	$mail_body .= "\n\n";
+	$mail_body .= "Thanks";
+	$mail_body .= "\n";
+	$mail_body .= "Avanti Fellows";
+	$message['body'][] = $mail_body;
+}
+
+
+

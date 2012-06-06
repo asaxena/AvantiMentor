@@ -1,0 +1,313 @@
+/**
+ * $Id: typography.css 3 2010-08-06 17:17:56Z jackncoke $
+ */
+h1.style1{color:#e9408f; font-size:24px; margin:10px;}
+h1.style2{color:#800040; font-size:24px; margin:10px;}
+h1.style3{color:#e9408f; background:#fff; font-size:24px; padding:15px;}
+h1.style4{color:#5A585A; padding-left: 40px; padding-bottom:5px; padding-top:5px; background-image:url("../images/icons/favorite.png"); background-position:left; background-repeat:no-repeat; font-size:24px; }
+h1.style5{color:#f0f0f0; background-color:#000000;	padding-left:40px;	padding-bottom:10px;	padding-top:10px;	background-image:url(../images/icons/important.png);	background-repeat:no-repeat;	font-size:24px;	background-position: 5px;}
+h1.style6{background-image: url(../images/icons/no.png);	background-repeat: no-repeat;	background-position: 5px;	padding-top: 10px;	padding-bottom: 10px;	padding-left: 40px;}
+
+h2.style1{color:#e9408f; font-size:18px; margin:10px;}
+h2.style2{color:#800040; font-size:15px; margin:10px;}
+h2.style3{color:#e9408f; background:#fff; font-size:18px; padding:8px;}
+h2.style4{color:#5A585A; padding-left: 40px; padding-bottom:5px; padding-top:5px; background-image:url("../images/icons/favorite.png"); background-position:left; background-repeat:no-repeat; font-size:18px; }
+h2.style5{color:#f0f0f0; background-color:#000000;	padding-left:40px;	padding-bottom:10px;	padding-top:10px;	background-image:url(../images/icons/important.png);	background-repeat:no-repeat;	font-size:18px;	background-position: 5px;}
+h2.style6{background-image: url(../images/icons/no.png);	background-repeat: no-repeat;	background-position: 5px;	padding-top: 10px;	padding-bottom: 10px;	padding-left: 40px;}
+
+p.dropcap{
+  text-align   : justify;
+  line-height  : 1.5em;
+}
+.firstLetter{
+  display      : block;
+  float        : left;
+  margin-top   : -0.205em; /* use -0.205em for two lines */
+  margin-left  : -0.56em;
+  margin-right : 0.5em;
+  height       : 2.5em;
+}
+.firstLetter span{
+  font-size    : 3.33em;   /* use 3.33em for two lines */
+  line-height  : 1.0em;
+}
+.firstLetter + span{
+  margin-left  : -0.5em;
+}
+
+div.style1, span.style1 {
+	margin-top: 10px;
+	margin-right: 0px;
+	margin-bottom: 10px;
+	margin-left: 0px;
+	padding-top: 5px;
+	padding-right: 10px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	background-attachment: scroll;
+	background-repeat: repeat;
+	background-image: none;
+	background-position: 0% 0%;
+	background-color: #FFF;
+	border-top-color: #d4d9de;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-bottom-color: #d4d9de;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	text-align: justify;
+}
+div.style2, span.style2 { 
+margin-top: 10px;
+margin-right: 0px;
+margin-bottom: 10px;
+margin-left: 0px;
+padding-top: 5px;
+padding-right: 10px;
+padding-bottom: 5px;
+padding-left: 10px;
+background-attachment: scroll;
+background-repeat: repeat;
+background-image: none;
+background-position: 0% 0%;
+background-color: #e4ebf1;
+border-top-color: #d4d9de;
+border-top-width: 1px;
+border-top-style: solid;
+border-bottom-color: #d4d9de;
+border-bottom-width: 1px;
+border-bottom-style: solid;
+text-align: justify;
+}
+div.style3, span.style3 { 
+background-attachment: scroll;
+background-repeat: no-repeat;
+background-image: url("../images/icons/favorite.png");
+background-position: 4px 5px;
+background-color: #FFDFEF;
+border-top-color: #ffd9cf;
+border-top-width: 1px;
+border-top-style: solid;
+border-bottom-color: #ffd9cf;
+border-bottom-width: 1px;
+border-bottom-style: solid;
+}
+div.style4, span.style4 {
+color:#fff; 
+background-attachment: scroll;
+background-repeat: no-repeat;
+background-image: url("../images/icons/no.png");
+background-position: 4px 5px;
+background-color: #5F5F5F;
+border-top-color: #fff;
+border-top-width: 1px;
+border-top-style: solid;
+border-bottom-color: #fff;
+border-bottom-width: 1px;
+border-bottom-style: solid;
+}
+
+
+
+
+div.style3, span.style3, div.style4, span.style4 { 
+margin-top: 10px;
+margin-right: 0px;
+margin-bottom: 10px;
+margin-left: 0px;
+padding-top: 8px;
+padding-right: 10px;
+padding-bottom: 8px;
+padding-left: 40px;
+}
+
+/*
+Link Style
+*/
+
+a.folder_open { 
+padding-left: 17px;
+background-attachment: scroll;
+background-repeat: no-repeat;
+background-image: url("../images/icons/folder_open.png");
+background-position: 0px 40%;
+background-color: transparent;
+}
+
+a.folder_close { 
+padding-left: 17px;
+background-attachment: scroll;
+background-repeat: no-repeat;
+background-image: url("../images/icons/folder_close.png");
+background-position: 0px 40%;
+background-color: transparent;
+}
+
+a.check { 
+padding-left: 17px;
+background-attachment: scroll;
+background-repeat: no-repeat;
+background-image: url("../images/icons/check.png");
+background-position: 0px 40%;
+background-color: transparent;
+}
+a.cancel { 
+padding-left: 17px;
+background-attachment: scroll;
+background-repeat: no-repeat;
+background-image: url("../images/icons/cancel.png");
+background-position: 0px 40%;
+background-color: transparent;
+}
+a.download { 
+padding-left: 17px;
+background-attachment: scroll;
+background-repeat: no-repeat;
+background-image: url("../images/icons/download.png");
+background-position: 0px 40%;
+background-color: transparent;
+}
+
+
+/* Unordered List Styles */
+ul.check li,ul.check2 li, ul.arrow li, ul.star li, ul.user-male li ,ul.user-female li   { 
+list-style:none;
+margin-right: 0px;
+margin-left: 0px;
+padding-left: 20px;
+font-weight: 700;
+line-height: 16px;
+margin-bottom:5px;
+}
+
+
+
+ul.check li { 
+background-attachment: scroll;
+background-repeat: no-repeat;
+background-image: url("../images/icons/check.png");
+background-position: 0px 0px;
+background-color: transparent;
+}
+ul.check2 li { 
+background-attachment: scroll;
+background-repeat: no-repeat;
+background-image: url("../images/icons/check2.png");
+background-position: 0px 0px;
+background-color: transparent;
+}
+ul.arrow li { 
+background-attachment: scroll;
+background-repeat: no-repeat;
+background-image: url("../images/icons/arrow.png");
+background-position: 0px 0px;
+background-color: transparent;
+}
+ul.star li { 
+background-attachment: scroll;
+background-repeat: no-repeat;
+background-image: url("../images/icons/star.png");
+background-position: 0px 0px;
+background-color: transparent;
+}
+ul.user-male li { 
+background-attachment: scroll;
+background-repeat: no-repeat;
+background-image: url("../images/icons/user-male.png");
+background-position: 0px 0px;
+background-color: transparent;
+}
+ul.user-female li { 
+background-attachment: scroll;
+background-repeat: no-repeat;
+background-image: url("../images/icons/user-female.png");
+background-position: 0px 0px;
+background-color: transparent;
+}
+ol.disc { 
+margin-top: 10px;
+margin-right: 0px;
+margin-bottom: 10px;
+margin-left: 0px;
+padding-top: 0px;
+padding-right: 0px;
+padding-bottom: 0px;
+padding-left: 18px;
+background-attachment: scroll;
+background-repeat: repeat-y;
+background-image: url("../images/icons/disc.png");
+background-position: 21px 1px;
+background-color: transparent;
+}
+ol.disc li { 
+margin-top: 5px;
+margin-right: 0px;
+margin-bottom: 5px;
+margin-left: 0px;
+padding-left: 10px;
+font-weight: 700;
+line-height: 26px;
+}
+
+
+/* Blockquote style here */
+blockquote { 
+font-family: "Georgia", "Times New Roman", "Times", serif;
+font-size:12pt;
+}
+blockquote.style2 {
+  font: 14px/22px normal helvetica, sans-serif;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 50px;
+  padding-left: 15px;
+  border-left: 3px solid #ccc;
+}
+blockquote.style1 {
+  font: 14px/20px italic Times, serif;
+  padding: 8px;
+  background-color: #faebbc;
+  border-top: 1px solid #e1cc89;
+  border-bottom: 1px solid #e1cc89;
+  margin: 5px;
+  background-image: url(../images/openquote1.gif);
+  background-position: top left;
+  background-repeat: no-repeat;
+  text-indent: 23px;
+  }
+  blockquote.style1 span {
+     display: block;
+     background-image: url(../images/closequote1.gif);
+     background-repeat: no-repeat;
+     background-position: bottom right;
+   }
+
+
+blockquote.style3 {
+font-family: "Georgia", "Times New Roman", "Times", serif;
+font-style: italic;
+font-size: 130%; 
+margin-top: 10px;
+margin-right: 0px;
+margin-bottom: 10px;
+margin-left: 0px;
+padding-top: 10px;
+padding-right: 35px;
+padding-bottom: 10px;
+padding-left: 35px;
+background-attachment: scroll;
+background-repeat: no-repeat;
+background-image: url(../images/blockquote_start.png);
+background-position: 0px 0px;
+background-color: transparent;
+text-align: justify;
+}
+
+blockquote.style4{
+	font-family: "Georgia", "Times New Roman", "Times", serif;
+	width:600px;
+	padding:25px;
+	background-color:#fff;
+	background-repeat: no-repeat;
+	background-position: center top;
+}

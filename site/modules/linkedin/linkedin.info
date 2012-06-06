@@ -1,0 +1,14 @@
+; $Id: linkedin.info,v 1.1.2.3 2010/09/21 17:20:41 bellesmanieres Exp $
+name = "LinkedIn"
+description = "Provides LinkedIn integration."
+package = "Linkedin"
+core = "6.x"
+
+
+
+; Information added by drupal.org packaging script on 2011-01-05
+version = "6.x-1.x-dev"
+core = "6.x"
+project = "linkedin"
+datestamp = "1294186704"
+

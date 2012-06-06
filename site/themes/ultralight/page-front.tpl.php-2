@@ -1,0 +1,95 @@
+<?php
+// ;$Id: page-front.tpl.php 3 2010-08-06 17:17:56Z jackncoke $
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php print $language->language; ?>" lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>">
+
+<head>
+  <title><?php print $head_title; ?></title>
+  <?php print $head; ?>
+  <?php print $styles; ?>
+  <?php print $scripts; ?>
+</head>
+<body>
+		<div id="place">
+			<div id="wraper" class="wraper">&nbsp;
+			
+					<div id="container" class="container">
+							
+							<div id="header">
+							<div id="header-top" class="clear-block">
+							<?php if ($logo): ?>
+              <div id="logo"><a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" id="logo-image"/></a>
+			  <br /><span style="color: black;display: inline-block;font-size: 15px;font-weight: bold; margin-top: 10px;">Mentorship Platform</span>
+			  </div><?php endif; ?>
+							
+							<!-- Search box here -->
+							<?php print $search_box;?>
+							<!-- search box end -->							
+							</div>
+							
+							<div id="navmenu" class="">
+							<?php if (!empty($primary_links)): ?>
+						  <?php
+							$menu = menu_tree($menu_name = 'primary-links');
+							$mymenu = str_replace("menu", "sf-menu", $menu );
+							$mymenu = str_replace("leaf", "", $mymenu );
+							$mymenu = str_replace("active-trail", "", $mymenu );
+							$mymenu = str_replace("expanded", "", $mymenu );
+							print $mymenu;
+							?>
+						<?php endif; ?>
+							<div style="clear: both;"></div></div>
+
+
+  						<div id="featured" class="clear-block"><?php print $header_block;?></div>
+							</div><!-- header end here -->
+							
+							
+							
+							
+							<div id="content" class="clear-block">
+									<div id="left-content" class="px670">
+									<div id="content-top-block" class="clear-block">
+											<?php if($content_top_block_1) { ?><div id="content-top-block-1" class="px216 first"><?php print $content_top_block_1;?></div><?php } ?>
+											<?php if($content_top_block_2) { ?><div id="content-top-block-2" class="px216 middle"><?php print $content_top_block_2;?></div><?php } ?>
+											<?php if($content_top_block_3) { ?><div id="content-top-block-3" class="px216 last"><?php print $content_top_block_3;?></div><?php } ?>
+									</div>	
+									
+							<div id="front-node">			
+							<?php print $content;?>
+							</div>			
+									<div id="content-bottom-block" class="clear-block">
+											<?php if($content_bottom_block_1) { ?><div id="content-bottom-block-1" class="px216 first"><?php print $content_bottom_block_1;?></div><?php } ?>
+											<?php if($content_bottom_block_2) { ?><div id="content-bottom-block-2" class="px216 middle"><?php print $content_bottom_block_2;?></div><?php } ?>
+											<?php if($content_bottom_block_3) { ?><div id="content-bottom-block-3" class="px216 last"><?php print $content_bottom_block_3;?></div><?php } ?>
+									</div>
+										
+								</div>
+							
+									<div id="right-content" class="px280">&nbsp;
+										<?php print $right;?>
+									</div>
+							</div>
+					
+					
+					<div id="footer">
+						<?php if($footer_block_1){?><div class="footer-block px310 first">&nbsp;<?php print $footer_block_1 ?></div><?php };?>
+						<?php if($footer_block_2){?><div class="footer-block px310 middle">&nbsp;<?php print $footer_block_2 ?></div><?php };?>
+						<?php if($footer_block_3){?><div class="footer-block px310 last">&nbsp;<?php print $footer_block_3 ?></div><?php };?>
+						
+						
+						<div id="split" class="hsplit clear-block">&nbsp;</div>
+						
+						<?php if($secondary_links){?><div id="footer-bottom-left" class="px470"><?php print theme('links',$secondary_links);?>&nbsp;</div><?php }?>
+						<?php if($footer_message){?><div id="footer-bottom-right" class="px470"><p><?php print $footer_message?></p>&nbsp;</div><?php }?>
+			
+					</div>
+					</div><!-- container end -->
+			<div style="clear: both;"></div>
+			</div><!-- wraper end -->
+			<div style="clear: both;"></div>
+		</div><!-- place end -->
+<?php print $closure; ?>
+</body>
+</html>

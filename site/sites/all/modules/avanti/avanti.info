@@ -1,0 +1,5 @@
+; $Id$
+name = Avanti Notification Module
+description = The module is responsible to send out notifications to user once a new flag is created.
+package = Green Apple Solutions
+core = 6.x

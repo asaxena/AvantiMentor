@@ -1,0 +1,17 @@
+<table>
+<tr>
+	<td valign="top"> 
+	<?php
+	if($content->field_profilepic){
+		print '<img width="100" src="'.$content->field_profilepic.'"/>';
+	}
+	else{
+		print '<img src="/sites/default/files/pictures/default.jpg" width="150" />';
+	}
+     ?>	
+	</td>
+	<td> <b><large><?php print $content->field_fname ?>  </td>
+</tr>
+</table>
+
+<?php //print '<pre>'. check_plain(print_r($profile, 1)) .'</pre>'; ?> 
